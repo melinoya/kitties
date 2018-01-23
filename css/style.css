@@ -1,0 +1,431 @@
+@font-face {
+	src: url(../fonts/Trebuchet.ttf) format("opentype");
+	font-family: Trebuchet;
+}
+
+html {
+	height: 100%;
+}
+
+body {
+	display: -webkit-box;
+	display: -webkit-flex;
+	display: -ms-flexbox;
+	display: flex;
+	-webkit-box-orient: vertical;
+	-webkit-box-direction: normal;
+	-webkit-flex-direction: column;
+	    -ms-flex-direction: column;
+	        flex-direction: column;
+
+	width: 100vw;
+	height: 100vh;
+	margin: 0;
+  
+  font-size: 100%;
+	font-family: "Trebuchet", sans-serif;
+	line-height: 1.23;
+	font-weight: normal;
+	color: white;
+
+
+	overflow-x: hidden;
+
+}
+
+main {
+	display: -webkit-box;
+	display: -webkit-flex;
+	display: -ms-flexbox;
+	display: flex;
+	-webkit-box-flex: 1;
+	-webkit-flex: 1 0 auto;
+	    -ms-flex: 1 0 auto;
+	        flex: 1 0 auto;	
+}
+
+.catalog {
+	min-height: 100vh;
+	margin: auto;
+
+	display: -webkit-box;
+
+	display: -webkit-flex;
+
+	display: -ms-flexbox;
+
+	display: flex;
+	-webkit-box-align: center;
+	-webkit-align-items: center;
+	    -ms-flex-align: center;
+	        align-items: center;
+	-webkit-box-orient: vertical;
+	-webkit-box-direction: normal;
+	-webkit-flex-direction: column;
+	    -ms-flex-direction: column;
+	        flex-direction: column;
+	-webkit-box-pack: center;
+	-webkit-justify-content: center;
+	    -ms-flex-pack: center;
+	        justify-content: center;
+
+	background: black url(../img/sprite.png);
+	-webkit-box-shadow: inset 0vw -10vw 100vw 1vw rgba(0,0,0,1),
+							inset 0vw 10vw 100vw 1vw rgba(0,0,0,1);
+	        box-shadow: inset 0vw -10vw 100vw 1vw rgba(0,0,0,1),
+							inset 0vw 10vw 100vw 1vw rgba(0,0,0,1);
+}
+
+.title {
+	display: block;
+	width: 100%;
+	margin: 0;
+	margin-bottom: 23px;
+	margin-left: -41px;
+
+	text-align: center;
+
+	font-family: "Exo 2", sans-serif;
+	font-size: 36px;
+	text-shadow: 0px 1px 0 #000000;
+	font-weight: 100;
+}
+
+.list {
+	display: -webkit-box;
+	display: -webkit-flex;
+	display: -ms-flexbox;
+	display: flex;
+	width: 100vw;
+	-webkit-flex-wrap: wrap;
+	    -ms-flex-wrap: wrap;
+	        flex-wrap: wrap;
+
+	-webkit-box-pack: center;
+
+	-webkit-justify-content: center;
+
+	    -ms-flex-pack: center;
+
+	        justify-content: center;
+
+}
+
+input {
+  display: none;
+}
+
+.doubt {
+	display: none;
+}
+
+
+.full::before {
+	content: "";
+	position: absolute;
+	z-index: 1;
+	left: -19.5px;
+	top: -8px;
+	width: 4px;
+	height: 62.5px;
+
+	background-color: #1698d9;
+
+	o-transform: rotate(45deg);
+	-ms-transform: rotate(45deg);
+	-webkit-transform: rotate(45deg);
+	transform: rotate(45deg);
+}
+
+.item {
+	position: relative;
+
+	width: 272px;
+	margin: 0px;
+	margin-left: 128px;
+}
+
+.item:first-of-type {
+	margin-left: 0;
+}
+
+.border::before {
+	content: "";
+	position: absolute;
+	left: -44px;
+	bottom: -4px;
+	width: 41px;
+	height: 436px;
+
+	background-color: #f2f2f2;
+	border-left: solid 4px #1698d9;
+	border-bottom: solid 4px #1698d9;
+	border-bottom-left-radius: 12px;
+}
+
+.border::after {
+	content: "";
+	position: absolute;
+	left: -41px;
+	top: 0px;
+
+	border-bottom: 41px solid #f2f2f2; 
+	border-left: 41px solid transparent;
+
+}
+
+
+
+.border {
+	position: relative;
+
+	height: 476px;
+	width: 272px;
+	margin-left: 3px;
+
+	border-radius: 12px;
+  background-color: #f2f2f2;
+  border: solid 4px #1698d9;
+  border-left: none;
+  border-top-left-radius: 0;
+  border-bottom-left-radius: 0;
+
+  font-family: "Trebuchet", sans-serif;
+
+}
+
+.border p {
+	margin-top: 20px;
+	
+  font-size: 16px;
+  color: #666666;
+}
+
+.border h2 {
+	margin: -10px 0;
+
+	font-size: 48px;
+  color: #000000;
+}
+
+.border h3 {
+	margin: 4px 2px;
+
+	font-size: 24px;
+	color: #000000;
+}
+
+.quantity {
+	position: relative;
+
+	display: block;
+	min-height: 31px;
+	margin: 0;
+	margin-left: 2px;
+	margin-top: 16px;
+
+	font-size: 14px;
+	font-family: inherit;
+	line-height: 1.14;
+
+	color: #666666;
+}
+
+.quantity span {
+	margin: 0;
+
+	font-weight: bold;
+}
+
+img {
+	position: absolute;
+	bottom: 0;
+	left: -40px;
+
+	display: block;	
+	
+	border-radius: 8px;
+
+}
+
+.weight {	
+	position: absolute;
+	z-index: 1;
+	bottom: 12px;
+	right: 13px;
+
+	display: block;
+	width: 80px;
+	height: 80px;
+
+	background: #1698d9;
+	border-radius: 50px;
+  
+  color: #ffffff;
+}
+
+.weight > p {	
+  font-size: 42px;
+  line-height: 0.52;
+  text-align: center;  
+  color: #ffffff !important;
+}
+
+.weight span {
+	font-size: 21px;
+  line-height: 1.05;
+}
+
+.buy {
+	position: relative;
+
+	display: block;	
+	width: 320px;
+	margin-top: 15px;
+	margin-left: -40px;
+
+	font-size: 13px;
+	text-align: center;
+}
+
+.buy label {
+	color: #1698d9;
+	text-decoration: none;
+
+	border-bottom: 1px dashed; 
+}
+
+.checked {
+	display: none;
+}
+
+.default {
+	display: block;
+}
+
+.disabled {
+	display: none;
+}
+
+
+/*TRANSFORMATIONS*/
+
+
+.full:hover  .border,
+.full:hover  .border::before {
+	border-color: #2ea8e6;
+}
+
+.full:hover::before,
+.full:hover .weight {
+	background-color: #2ea8e6;
+}
+
+
+input:checked + label > div,
+input:checked + label > .border::before{
+  border-color: #d91667; 
+}
+
+input:checked + label.full::before,
+input:checked + label .weight {
+	background-color: #d91667;
+}
+
+input:checked + label > .buy > .default {
+	display: none;
+}
+
+
+input:checked + label > .buy > .checked {
+	display: block;
+}
+
+input:checked + label:hover > .border,
+input:checked + label:hover > .border::before {
+	border-color: #e62e7a;
+}
+
+input:checked + label:hover.full::before,
+input:checked + label:hover .weight {
+	background-color: #e62e7a;
+}
+
+input:checked + label:hover .undoubt,
+input:checked + label + .buy > .default {
+	display: none;
+}
+
+input:checked + label + .buy .checked {
+	display: block;
+}
+
+input:checked + label:hover  .doubt {
+	display: block;
+	color: #e62e7a;
+}
+
+.item_disabled + .buy > .default {
+	display: none;
+}
+
+.item_disabled + .buy > .disabled {
+	display: block;
+	color: #ffff66;
+}
+
+.item_disabled img {
+	opacity: 0.5;
+}
+
+.item_disabled p,
+.item_disabled h2,
+.item_disabled h3,
+.item_disabled .quantity {
+	color: #b3b3b3;
+}
+
+.item_disabled .border,
+.item_disabled .border::before {
+	border-color: #b3b3b3 !important;
+}
+
+.item_disabled::before,
+.item_disabled .quantity::after,
+.item_disabled .weight {
+	background-color:  #b3b3b3 !important;
+}
+
+
+
+/*ADAPTIVE*/
+
+
+@media screen and (min-width: 700px) and (max-width: 1199px) {
+	.item {
+		margin-bottom: 25px;
+	}
+	.item:nth-child(3) {
+		margin-left: 50px;
+	}
+
+	.item:first-of-type {
+		margin-left: 50px;
+	}
+}
+
+@media screen and (max-width: 700px) {
+	.item {
+		margin-left: 50px;
+		margin-bottom: 25px;
+	}
+
+	.item:first-of-type {
+		margin-left: 50px;
+	}
+
+
+
+
+
+}
